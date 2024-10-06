@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager</title>
+    <link href="/ADMIN/assets/img/favicon.png" rel="icon">
+    <link href="/ADMIN/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="/ADMIN/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/ADMIN/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/ADMIN/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/ADMIN/assets/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="/ADMIN/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+    <link href="/ADMIN/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="/ADMIN/assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  
+    <!-- Template Main CSS File -->
+    <link href="/ADMIN/assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+      <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">Manager</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="/ADMIN/assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Kevin Anderson</h6>
+              <span>Web Designer</span>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="./Login.html">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header --> 
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav"  id="sidebar-nav">
+      <li class="nav-item">
+      <a class="nav-link collapsed"  style="background-color: #F6F9FF; color: #4154F1;" href="index_manager.html">
+        <i class="bi bi-grid"></i>
+        <span>Home</span>
+      </a>
+      
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="manager_Calamviec.html">
+          <i class="bi bi-calendar-event"></i>
+          <span>Ca làm việc</span>
+        </a>
+        
+        </li><!-- End Profile Page Nav -->
+
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="manager_bao_cao.html">
+            <i class="bi bi-bar-chart"></i>
+            <span>Báo cáo </span>
+          </a>
+          
+          </li><!-- End Profile Page Nav -->
+  
+
+    </ul>
+  </aside>
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Danh Sách User</h1>
+
+    </div><!-- End Page Title -->
+ <!-- ae back end chuyền dữ liệu vào chỗ tôi đánh dấu  -->
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <section class="section">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <table class="table datatables">
+                        <thead>
+                          <tr>
+                            <th>Mã nhân viên </th>
+                            <th><b>T</b>ên</th>
+                            <th>Chức Vụ</th>
+                            <th>Tài khoản</th>
+                            <th>Mật Khẩu</th>
+                            <th data-type="date" data-format="YYYY/DD/MM">Ngày tạo</th>
+                            <th>Hành Động</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <!-- @ -->
+                            <td class="_MNV">9958</td>
+                            <td class="_name">Unity Pugh</td>
+                            <td><b class="_ChucV">Manager</b></td>
+                            <td class="_TaiK">email@example.com</td> 
+                            <td class="MatK">password123</td> 
+                            <td class="NgayT">2005/02/11</td>
+                            <td class="Hanh-dong">
+                            <button type="button" class="btn btn-warning edit">edit</button>
+                            <button type="button" class="btn btnbtn btn-danger delete">delete</button>
+                          </td>
+                          <!-- @ -->
+                          </tr>
+                          <tr>
+                            <td class="_MNV">9958</td>
+                            <td class="_name">Unity Pugh</td>
+                            <td><b class="_ChucV">Manager</b></td>
+                            <td class="_TaiK">email@example.com</td> 
+                            <td class="MatK">password123</td> 
+                            <td class="NgayT">2005/02/11</td>
+                            <td class="Hanh-dong">
+                            <button type="button" class="btn btn-warning edit">edit</button>
+                            <button type="button" class="btn btnbtn btn-danger delete">delete</button>
+                          </td>
+                          <tr>
+                            <td class="_MNV">9958</td>
+                            <td class="_name">Unity Pugh</td>
+                            <td><b class="_ChucV">Manager</b></td>
+                            <td class="_TaiK">email@example.com</td> 
+                            <td class="MatK">password123</td> 
+                            <td class="NgayT">2005/02/11</td>
+                            <td class="Hanh-dong">
+                            <button type="button" class="btn btn-warning edit">edit</button>
+                            <button type="button" class="btn btnbtn btn-danger delete">delete</button>
+                          </td>
+                          </tr>  
+                          </tr>               
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <div class="add-user">
+              <button type="button" class="btn btn-primary">ADD USER</button>
+            </div>
+          </div>
+        </div>
+    
+   
+  </main><!-- End #main -->
+
+  <div class="form" style="display: none; ">
+    <form class="row g-3"  id="editForm">
+      <div class="col-md-3">
+        <label for="inputMNV" class="form-label">Mã nhân viên </label>
+        <input type="text" class="form-control" id="inputMNV">
+      </div>
+      <div class="col-md-6">
+        <label for="input_Name" class="form-label">Tên</label>
+        <input type="text" class="form-control" id="input_Name">
+      </div>
+      <div class="col-md-3">
+        <label for="inputChucVu" class="form-label">Chức vụ</label>
+        <input type="text" class="form-control" id="inputChucVu">
+      </div>
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail4">
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Password</label>
+        <input type="password" class="form-control" id="inputPassword4">
+      </div>
+      <div class="col-md-6">
+        <label for="inputDate" class="form-label">Ngày tháng</label>
+        <input type="date" class="form-control" id="inputDate">
+      </div>
+      <div class="col-12">
+        <div class="row">
+          <div class="col-2" style="margin-right: 30px;">
+            <button type="submit" style="width: 100px;" class="btn btn-primary">Submit</button>
+          </div>
+          <div class="col-2">
+            <button type="button" style="width: 100px; background-color: #808080; border: #808080 solid 1px;" class="btn btn-primary cancel">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="form_add_department" style="display: none;" >
+      <form class="row g-3"  id="editForm_department">
+        <div class="col-md-12">
+          <label for="input_department" class="form-label" style="color: #4154F1;">Tên phòng ban</label>
+          <input type="text" class="form-control" id="input_department">
+        </div>
+        <div class="col-2" style="margin-right: 30px;">
+          <button type="submit" style="width: 100px;" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="col-2">
+          <button type="button" style="width: 100px; background-color: #808080; border: #808080 solid 1px;" class="btn btn-primary cancel2">Cancel</button>
+        </div>
+      </form>
+  </div>
+  <div class="overlay" style="display: none;"></div>
+  <script src="/ADMIN/assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="/ADMIN/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/ADMIN/assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="/ADMIN/assets/vendor/echarts/echarts.min.js"></script>
+  <script src="/ADMIN/assets/vendor/quill/quill.js"></script>
+  <script src="/ADMIN/assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="/ADMIN/assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="/ADMIN/assets/vendor/php-email-form/validate.js"></script>
+
+   
+    <script src="/ADMIN/assets/js/main.js"></script>
+    <script>
+    const Button_addForm = document.querySelectorAll(".add-user");
+    const overlay = document.querySelector(".overlay");
+    const form = document.querySelector(".form");
+    const form_add_department=document.querySelector(".form_add_department")
+    const Add_Deperments=document.querySelector(".Add_Deperments");
+    const cancelButton = document.querySelector(".cancel");
+    const cancelButton2 = document.querySelector(".cancel2");
+    const inputMNV = document.getElementById("inputMNV");
+    const inputName = document.getElementById("input_Name");
+    const inputChucVu = document.getElementById("inputChucVu");
+    const inputEmail = document.getElementById("inputEmail4");
+    const inputPassword = document.getElementById("inputPassword4");
+
+
+    
+      // Khi click vào nút "Thêm người dùng", hiển thị form và overlay
+      Button_addForm.forEach(item => {
+        item.addEventListener("click", function(event) {
+        inputMNV.value = "";
+        inputName.value = "";
+        inputChucVu.value = "";
+        inputEmail.value = "";
+        inputPassword.value = "";
+          form.style.display = "block";
+          overlay.style.display = "block";
+          event.stopPropagation();
+        });
+      });
+      
+      // Khi click vào nút "Cancel" trong form, ẩn form và overlay
+      cancelButton.addEventListener("click", function(event) {
+        form.style.display = "none";
+        overlay.style.display = "none";
+        event.stopPropagation();
+      });
+      
+      // Ngăn chặn việc click bên ngoài form đóng form (overlay sẽ không có tác dụng đóng form)
+      overlay.addEventListener("click", function(event) {
+        event.stopPropagation();
+      });
+      
+    
+    
+    // Lấy tất cả các nút edit
+    const editButtons = document.querySelectorAll(".edit");
+    
+    // Lấy form và các trường trong form
+    
+    // Xử lý sự kiện khi nhấn vào nút edit
+    editButtons.forEach(button => {
+      button.addEventListener("click", function(event) {
+        overlay.style.display = "block";
+        // Tìm hàng cha của nút được click
+        const row = button.closest("tr");
+       
+        // Lấy dữ liệu từ các cột trong hàng đó
+        const maNV = row.querySelector("._MNV").textContent;
+        const ten = row.querySelector("._name").textContent;
+        const chucVu = row.querySelector("._ChucV").textContent;
+        const taiKhoan = row.querySelector("._TaiK").textContent;
+        const matKhau = row.querySelector(".MatK").textContent;
+        // Điền dữ liệu vào form
+        inputMNV.value = maNV;
+        inputName.value = ten;
+        inputChucVu.value = chucVu;
+        inputEmail.value = taiKhoan;
+        inputPassword.value = matKhau;
+    
+        // Hiển thị form
+        form.style.display = "block";
+      });
+    });
+    
+    
+    
+    Add_Deperments.addEventListener('click',(event)=>{
+      form_add_department.style.display="block";
+      overlay.style.display = "block";
+          event.stopPropagation();
+    })
+    
+    cancelButton2.addEventListener("click", function(event) {
+      form_add_department.style.display = "none";
+      overlay.style.display = "none";
+      event.stopPropagation();
+    });
+    
+    </script>
+</body>
+</html>
+
+
